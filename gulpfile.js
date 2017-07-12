@@ -35,15 +35,13 @@ lazyRequireTask('less', './tasks/less', {
     conc: 'main.css',
     dst: 'public/style'
 });
-/*
 
 lazyRequireTask('js', './tasks/js', {
-    src: 'app/js/!**!/!*.js',
+    src: 'app/js/**/*.js',
     dst: 'public/js'
 });
-*/
 
-gulp.task('build', gulp.series('clean', gulp.parallel('less', 'images', 'assets', 'fonts')));
+gulp.task('build', gulp.series('clean', gulp.parallel('less', 'images', 'assets', 'fonts', 'js')));
 
 gulp.task('watch', () => {
     gulp.watch('app/less/**/*.*', gulp.series('less'));
