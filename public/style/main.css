@@ -312,20 +312,38 @@ li {
     width: 20px;
     font-size: 33px;
   }
+  .gallery {
+    max-height: 831px;
+    min-height: 539px;
+    position: relative;
+  }
   .gallery img {
     clear: both;
     display: block;
     width: 100%;
     height: auto;
   }
+  .gallery span {
+    z-index: 5;
+    color: white;
+    font-size: 9vw;
+    top: 36vw;
+    font-family: "QuickSand Bold", sans-serif;
+    left: 2vw;
+    max-width: 10px;
+  }
+  .gallery .right {
+    left: 90.5vw;
+  }
   .content-section {
     padding: 56px;
     padding-left: 52px;
+    padding-top: 0;
     background-color: #eaeaea;
     height: 1130px;
   }
   .content-section p {
-    margin-top: 10px;
+    margin-top: 10%;
     padding-left: 3.7%;
     font-size: 30px;
     color: #008aa3;
@@ -336,6 +354,7 @@ li {
     padding-top: 29px;
   }
   .content-section div p {
+    margin-top: 0;
     padding-left: 0;
     line-height: 2;
     letter-spacing: 0;
@@ -460,6 +479,7 @@ li {
   }
   .gallery {
     min-width: 320px;
+    position: relative;
   }
   .gallery img {
     clear: both;
