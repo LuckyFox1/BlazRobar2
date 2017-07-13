@@ -48,6 +48,7 @@ gulp.task('watch', () => {
     gulp.watch('app/**/*.html', gulp.series('assets'));
     gulp.watch('app/fonts/**/*.*', gulp.series('fonts'));
     gulp.watch('app/img/**/*.*', gulp.series('images'));
+    gulp.watch('app/js/**/*.*', gulp.series('js'));
 });
 
 lazyRequireTask('serve', './tasks/serve', {
