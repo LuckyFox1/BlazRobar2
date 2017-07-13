@@ -3,7 +3,8 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #cbcbcb;
+    height: 100%;
+    background-color: #cfcfcf;
 }
 
 div, ul, li, h1, p, img {
@@ -26,6 +27,8 @@ li {
     width: 100%;
     margin: 0 auto;
     min-width: 320px;
+    background-color: #eaeaea;
+    height: 100%;
 }
 
 .header {
@@ -37,6 +40,9 @@ li {
     padding-top: 41px;
     color: white;
     font-family: 'Montserrat Regular', sans-serif;
+    p {
+        display: none;
+    }
     .menu-button {
         display: none;
     }
@@ -108,8 +114,6 @@ li {
     }
 }
 
-
-
 .intermediate-block {
     min-width: 320px;
 
@@ -160,7 +164,7 @@ li {
     height: 294px;
     img {
         width: 33.33%;
-        height: inherit;
+        height: auto;
         float: left;
     }
 }
@@ -205,11 +209,17 @@ li {
 @media (min-width: 640px) and (max-width: 979px) {
     .header {
         padding: 0;
-        height: 74px;
+        height: 75px;
+        p {
+            margin: 23px;
+            margin-left: 34px;
+            font-size: 22px;
+            display: inline-block;
+            letter-spacing: 0.9px;
+        }
 
         ul {
             margin: 0;
-            margin-top: 74px;
             position: absolute;
             height: 190px;
             width: 100%;
@@ -259,6 +269,8 @@ li {
                 font-size: 39px;
                 letter-spacing: 0.1px;
                 line-height: 1.1;
+                max-width: 460px;
+
             }
         }
         .link {
@@ -310,9 +322,10 @@ li {
             clear: both;
             display: block;
             width: 100%;
-            height: 188.2%;
+            height: auto;
         }
     }
+
     .content-section {
         padding: 56px;
         padding-left: 52px;
@@ -345,13 +358,17 @@ li {
 @media (max-width: 639px) {
     .header {
         min-width: 320px;
-
         padding: 0;
         height: 38px;
-
+        p {
+            margin: 12px;
+            margin-left: 14px;
+            font-size: 10px;
+            display: inline-block;
+            letter-spacing: 0.9px;
+        }
         ul {
             margin: 0;
-            margin-top: 38px;
             position: absolute;
             height: 140px;
             width: 100%;
@@ -401,6 +418,7 @@ li {
         height: 173px;
         .header-banner {
             p {
+                max-width: 227px;
                 margin-top: 54px;
                 padding-top: 0;
                 font-size: 21px;
@@ -459,18 +477,17 @@ li {
             clear: both;
             display: block;
             width: 100%;
-            height: 94.1%;
+            height: auto;
         }
     }
-    .content-section {
-        min-width: 320px;
 
+    .content-section {
         padding: 24px;
         padding-left: 27px;
         padding-bottom: 0;
         margin-bottom: 0;
         background-color: #eaeaea;
-        height: 100%;
+        min-height: 741px;
         p {
             margin-top: 10px;
             padding-left: 3.7%;
