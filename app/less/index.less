@@ -42,6 +42,7 @@ li {
     }
     ul {
         margin-left: 15px;
+        display: block;
         .list-hover;
         li {
             display: inline-block;
@@ -106,6 +107,8 @@ li {
         }
     }
 }
+
+
 
 .intermediate-block {
     min-width: 320px;
@@ -220,6 +223,13 @@ li {
                 text-align: left;
                 display: block;
             }
+        }
+        ul.invisible {
+            display: none;
+        }
+
+        ul.visible {
+            display: block;
         }
 
         #menu-button {
@@ -347,9 +357,8 @@ li {
             width: 100%;
             background-color: #252a2d;
             .gradient2;
-            //display: block;
-            .list-hover;
             display: none;
+            .list-hover;
             li {
                 margin-top: 12px;
                 margin-left: 15px;
@@ -357,6 +366,13 @@ li {
                 display: block;
                 font-size: 10px;
             }
+        }
+        ul.invisible {
+            display: none;
+        }
+
+        ul.visible {
+            display: block;
         }
 
         #menu-button {
