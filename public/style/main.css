@@ -313,7 +313,6 @@ li {
     font-size: 33px;
   }
   .gallery {
-    max-height: 831px;
     min-height: 539px;
     position: relative;
   }
@@ -322,18 +321,6 @@ li {
     display: block;
     width: 100%;
     height: auto;
-  }
-  .gallery span {
-    z-index: 5;
-    color: white;
-    font-size: 9vw;
-    top: 36vw;
-    font-family: "QuickSand Bold", sans-serif;
-    left: 2vw;
-    max-width: 10px;
-  }
-  .gallery .right {
-    left: 90.5vw;
   }
   .content-section {
     padding: 56px;
