@@ -142,7 +142,7 @@ li {
   background-color: #c03382;
   height: 71px;
   display: inline-block;
-  width: 4.5%;
+  width: 4.53%;
   padding: 87px 8.5% 87px 9.15%;
 }
 .intermediate-block .right a {
@@ -311,11 +311,10 @@ li {
     font-family: 'QuickSand Bold', sans-serif;
   }
   .intermediate-block {
-    height: 14px;
     border: none;
   }
   .intermediate-block .left {
-    height: inherit;
+    height: 14px;
     width: 61%;
     padding: 68px 8.4% 68px 8.42%;
   }
@@ -333,12 +332,12 @@ li {
     width: 20px;
     font-size: 33px;
   }
-  .intermediate-block .right:after {
+  .intermediate-block:after {
     content: '';
     display: block;
     clear: both;
   }
-  .intermediate-block .left:before {
+  .intermediate-block:before {
     content: '';
     display: block;
     clear: both;
@@ -502,10 +501,9 @@ li {
   }
   .intermediate-block {
     min-width: 320px;
-    height: 7px;
   }
   .intermediate-block .left {
-    height: inherit;
+    height: 7px;
     width: 61%;
     padding: 34px 8.4% 34px 8.42%;
   }
@@ -523,12 +521,12 @@ li {
     width: 20px;
     font-size: 16px;
   }
-  .intermediate-block .right:after {
+  .intermediate-block:after {
     content: '';
     display: block;
     clear: both;
   }
-  .intermediate-block .left:before {
+  .intermediate-block:before {
     content: '';
     display: block;
     clear: both;
