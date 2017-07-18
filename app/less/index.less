@@ -3,23 +3,22 @@
 body {
     padding: 0;
     margin: 0;
-    height: 100%;
+    min-height: 1626px;
+    height: 1px;
     background-color: #cfcfcf;
 }
 
-div, ul, li, h1, p, img {
+div, ul, li, h1, p, img, h3, h2 {
     margin: 0;
     padding: 0;
 }
 
-li {
-    list-style-type: none;
+a {
+    text-decoration: none;
 }
 
-.list-hover {
-    li:hover {
-        color: #919191;
-    }
+li {
+    list-style-type: none;
 }
 
 .wrapper {
@@ -33,32 +32,35 @@ li {
 
 .header {
     min-width: 320px;
-
     background-color: #3a3e41;
-    height: 17px;
-    padding: 39px;
-    padding-top: 41px;
+    height: 97px;
+    //padding: 41px 39px 39px 39px;
     color: white;
     font-family: 'Montserrat Regular', sans-serif;
-    p {
+    h2 {
         display: none;
     }
     .menu-button {
         display: none;
     }
     ul {
-        margin-left: 15px;
+        //vertical-align: middle;
+        padding: 0 0 0 15px;
         display: block;
-        .list-hover;
-        li {
+        height: 100%;
+        & > li {
             display: inline-block;
-            list-style-type: none;
-            text-align: center;
-            font-size: 15px;
-            margin-right: 24px;
+            vertical-align: middle;
+            a {
+                color: white;
+                list-style-type: none;
+                text-align: center;
+                font-size: 15px;
+                margin: 0 24px 0 0;
+            }
         }
-        li:first-child + li {
-            margin-right: 20.5px;
+        & > li:first-child + li a {
+            margin: 0 20.5px 0 0;
         }
     }
 }
@@ -75,85 +77,82 @@ li {
 
 .main-banner {
     min-width: 320px;
-
     .gradient;
-    padding-left: 83px;
-    padding-top: 130px;
+    padding: 130px 0 0 83px;
     height: 447px;
     .header-banner {
         font-family: 'Montserrat Regular', sans-serif;
-        p {
-            margin-top: 63px;
-            max-width: 800px;
-            display: block;
-            font-size: 62px;
-            color: white;
-            letter-spacing: 0.4px;
-            line-height: 68px;
-        }
+        margin: 63px 0 0 0;
+        max-width: 800px;
+        display: block;
+        font-size: 62px;
+        color: white;
+        font-weight: normal;
+        letter-spacing: 0.4px;
+        line-height: 68px;
     }
     .link {
-        p {
-            margin-top: 44px;
-            max-width: 724px;
-            display: block;
-            color: #acd7de;
-            font-size: 35px;
-            font-family: 'Montserrat Regular', sans-serif;
-            letter-spacing: 0.3px;
-            &:after {
-                float: right;
-                color: white;
-                margin-top: 6px;
-                font-size: 37px;
-                content: '>';
-                font-family: 'QuickSand Bold', sans-serif;
-
-            }
+        margin: 44px 0 0 0;
+        max-width: 724px;
+        display: block;
+        color: #acd7de;
+        font-size: 35px;
+        font-family: 'Montserrat Regular', sans-serif;
+        letter-spacing: 0.3px;
+        &:after {
+            float: right;
+            color: white;
+            margin: 7px 0 0 0;
+            font-size: 37px;
+            content: '>';
+            font-family: 'QuickSand Bold', sans-serif;
         }
     }
 }
 
 .intermediate-block {
     min-width: 320px;
-
-    height: 53px;
     border: none;
-    .right {
+    .left {
         float: left;
         background-color: #2c2630;
-        height: inherit;
-        display: inline-block;
+        height: 70.5px;
         width: 61%;
-        padding: 86px;
-        padding-right: 8.4%;
-        padding-left: 8.42%;
-        padding-top: 106px;
-        p {
+        padding: 106px 8.4% 68px 8.42%;
+        h3 {
             font-family: 'Montserrat Regular', sans-serif;
             font-size: 31px;
             color: #9685a4;
             letter-spacing: 0.2px;
+            font-weight: normal;
         }
     }
-    .left {
+    .right {
         float: left;
         background-color: #c03382;
         height: 71px;
         display: inline-block;
         width: 4.5%;
-        padding: 87px;
-        padding-right: 8.5%;
-        padding-left: 9.15%;
+        padding: 87px 8.5% 87px 9.15%;
         a {
             display: block;
             width: 40px;
             text-decoration: none;
-            margin-top: 7px;
+            margin: 7px 0 0 0;
             color: white;
             font-family: "QuickSand Bold", sans-serif;
             font-size: 51px;
         }
+    }
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    &:before {
+        content: '';
+        display: block;
+        clear: both;
     }
 }
 
@@ -176,18 +175,18 @@ li {
     clear: both;
     background-color: #eaeaea;
     height: 315px;
-    p {
-        padding-left: 3.1%;
+    h3 {
+        font-weight: normal;
+        padding: 0 0 0 3.1%;
         font-size: 30px;
         color: #008aa3;
     }
-    div {
-        padding: 20px;
-        padding-top: 18px;
+    div.article {
+        padding: 18px 20px 20px 20px;
         width: 45%;
         float: left;
         p {
-            margin-bottom: 25px;
+            margin: 0 0 25px 0;
             line-height: 1.9;
             letter-spacing: 0.01px;
             font-size: 14px;
@@ -210,30 +209,32 @@ li {
     .header {
         padding: 0;
         height: 75px;
-        p {
-            margin: 23px;
-            margin-left: 34px;
-            font-size: 22px;
+        h2 {
+            margin: 23px 0 0 35.5px;
+            font-size: 23px;
             display: inline-block;
-            letter-spacing: 0.9px;
+            letter-spacing: 0.7px;
+            font-weight: normal;
+            vertical-align: middle;
         }
 
         ul {
             margin: 0;
+            padding: 0;
+            top: 75px;
             position: absolute;
             height: 190px;
             width: 100%;
             background-color: #252a2d;
             .gradient2;
             display: none;
-            .list-hover;
-            li {
-                margin-top: 16px;
-                margin-left: 20px;
-                text-align: left;
+            & > li {
                 display: block;
+                margin: 15px 0 0 20px;
+                text-align: left;
             }
         }
+
         ul.invisible {
             display: none;
         }
@@ -243,6 +244,7 @@ li {
         }
 
         #menu-button {
+            position: relative;
             display: block;
             width: 6%;
             padding: 22px;
@@ -250,40 +252,56 @@ li {
             height: 30px;
             background-color: #252a2d;
             text-align: center;
-            span {
-                margin: 4px;
+            div {
+                position: relative;
+                top: 10%;
+                margin-top: 9px;
+                margin-left: 4px;
+                background-color: white;
+                height: 4px;
+                width: 88%;
+            }
+            div:before {
+                content: '';
+                position: absolute;
+                bottom: 35%;
+                display: block;
+                margin-bottom: 7px;
+                background-color: white;
+                height: 4px;
+                width: 100%;
+            }
+            div:after {
+                content: '';
+                position: absolute;
+                top: 55%;
+                margin-top: 6px;
                 display: block;
                 background-color: white;
                 height: 4px;
-                width: 82%;
+                width: 100%;
             }
         }
     }
 
     .main-banner {
-        padding-left: 51px;
-        padding-top: 45px;
+        padding: 45px 0 0 51px;
         height: 302px;
         .header-banner {
-            p {
-                font-size: 39px;
-                letter-spacing: 0.1px;
-                line-height: 1.1;
-                max-width: 460px;
-
-            }
+            font-size: 39px;
+            letter-spacing: 0.1px;
+            line-height: 1.1;
+            max-width: 460px;
         }
         .link {
-            p {
-                margin-top: 28px;
-                max-width: 452px;
-                font-size: 22px;
-                letter-spacing: 0.2px;
-                &:after {
-                    font-size: 24px;
-                    content: '>';
-                    font-family: 'QuickSand Bold', sans-serif;
-                }
+            margin: 28px 0 0 0;
+            max-width: 452px;
+            font-size: 22px;
+            letter-spacing: 0.2px;
+            &:after {
+                font-size: 24px;
+                content: '>';
+                font-family: 'QuickSand Bold', sans-serif;
             }
         }
     }
@@ -291,29 +309,34 @@ li {
     .intermediate-block {
         height: 14px;
         border: none;
-        .right {
+        .left {
             height: inherit;
-            display: inline-block;
             width: 61%;
-            padding: 68px;
-            padding-right: 8.4%;
-            padding-left: 8.42%;
-            p {
+            padding: 68px 8.4% 68px 8.42%;
+            h3 {
                 font-size: 20px;
                 letter-spacing: -0.2px;
+                font-weight: normal;
             }
         }
-        .left {
+        .right {
             height: 41px;
             width: 4.5%;
-            padding: 61px;
-            padding-top: 48px;
-            padding-right: 8.5%;
-            padding-left: 9.15%;
+            padding: 48px 8.5% 61px 9.15%;
             a {
                 width: 20px;
                 font-size: 33px;
             }
+        }
+        .right:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .left:before {
+            content: '';
+            display: block;
+            clear: both;
         }
     }
 
@@ -335,19 +358,18 @@ li {
         padding-top: 0;
         background-color: #eaeaea;
         height: 1130px;
-        p {
+        h3 {
             margin-top: 10%;
             padding-left: 3.7%;
             font-size: 30px;
             color: #008aa3;
         }
-        div {
+        div.article {
             width: 100%;
             float: left;
-            padding-top: 29px;
+            padding: 29px 20px 20px 20px;
             p {
-                margin-top: 0;
-                padding-left: 0;
+                padding: 0;
                 line-height: 2;
                 letter-spacing: 0;
                 font-size: 22px;
@@ -361,32 +383,40 @@ li {
 }
 
 @media (max-width: 639px) {
+    body {
+        min-height: 1326px;
+    }
+
     .header {
         min-width: 320px;
         padding: 0;
         height: 38px;
-        p {
-            margin: 12px;
-            margin-left: 14px;
-            font-size: 10px;
+        h2 {
+            vertical-align: middle;
+            margin: 12px 0 0 18px;
+            font-size: 10.5px;
             display: inline-block;
-            letter-spacing: 0.9px;
+            letter-spacing: 0.6px;
+            font-weight: normal;
+
         }
         ul {
             margin: 0;
+            padding: 0;
             position: absolute;
+            top: 38px;
             height: 140px;
             width: 100%;
             background-color: #252a2d;
             .gradient2;
             display: none;
-            .list-hover;
             li {
-                margin-top: 12px;
-                margin-left: 15px;
+                margin: 6px 0 0 12px;
                 text-align: left;
                 display: block;
-                font-size: 10px;
+                a {
+                    font-size: 10px;
+                }
             }
         }
         ul.invisible {
@@ -398,6 +428,7 @@ li {
         }
 
         #menu-button {
+            position: relative;
             display: block;
             width: 6.2%;
             padding: 10px;
@@ -407,71 +438,99 @@ li {
             text-align: center;
             span {
                 margin: 2px;
+                background-color: white;
+                height: 2px;
+                width: 78%;
+            }
+            div {
+                position: relative;
+                top: 0;
+                margin-top: 7px;
+                margin-left: 2px;
+                background-color: white;
+                height: 2px;
+                width: 72%;
+            }
+            div:before {
+                content: '';
+                position: absolute;
+                bottom: 35%;
+                display: block;
+                margin-bottom: 3px;
+                background-color: white;
+                height: 2px;
+                width: 100%;
+            }
+            div:after {
+                content: '';
+                position: absolute;
+                top: 55%;
+                margin-top: 3px;
                 display: block;
                 background-color: white;
                 height: 2px;
-                width: 77%;
+                width: 100%;
             }
         }
     }
 
     .main-banner {
-        min-width: 320px;
-
-        padding-left: 26px;
-        padding-top: 0.1%;
+        min-width: 294px;
+        padding: 0.1% 0 0 26px;
         height: 173px;
         .header-banner {
-            p {
-                max-width: 227px;
-                margin-top: 54px;
-                padding-top: 0;
-                font-size: 21px;
-                letter-spacing: -0.9px;
-                line-height: 1.05;
-            }
+            max-width: 227px;
+            margin: 53px 0 0 0;
+            font-size: 21px;
+            font-weight: normal;
+            letter-spacing: -0.9px;
+            line-height: 1.05;
         }
         .link {
-            p {
-                margin-top: 12px;
-                max-width: 227px;
-                font-size: 10px;
-                letter-spacing: 0.75px;
-                &:after {
-                    font-size: 12px;
-                    content: '>';
-                    font-family: 'QuickSand Bold', sans-serif;
-                }
+            margin: 14px 0 0 0;
+            max-width: 227px;
+            font-size: 10px;
+            letter-spacing: 0.75px;
+            &:after {
+                margin: 0;
+                font-size: 12px;
+                content: '>';
+                font-family: 'QuickSand Bold', sans-serif;
             }
         }
     }
 
     .intermediate-block {
         min-width: 320px;
-
         height: 7px;
-        .right {
+        .left {
             height: inherit;
-            display: inline-block;
             width: 61%;
-            padding: 34px;
-            padding-right: 8.4%;
-            padding-left: 8.42%;
-            p {
+            padding: 34px 8.4% 34px 8.42%;
+            h3 {
                 font-size: 10px;
                 letter-spacing: -0.1px;
+                font-weight: normal;
             }
         }
-        .left {
+        .right {
             height: 25px;
             width: 4.5%;
-            padding: 25px;
-            padding-right: 8.5%;
-            padding-left: 9.15%;
+            padding: 25px 8.5% 25px 9.15%;
             a {
                 width: 20px;
                 font-size: 16px;
             }
+        }
+        .right:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .left:before {
+            content: '';
+            display: block;
+            clear: both;
         }
     }
 
@@ -489,36 +548,28 @@ li {
     }
 
     .content-section {
-        padding: 24px;
-        padding-left: 27px;
-        padding-bottom: 0;
-        margin-bottom: 0;
+        padding: 24px 24px 0 27px;
+        margin: 0;
         background-color: #eaeaea;
         min-height: 741px;
-        p {
-            margin-top: 10px;
-            padding-left: 3.7%;
+        h3 {
+            margin: 10px 0 0 0;
+            padding: 0 0 0 3.7%;
             font-size: 18px;
             color: #008aa3;
             letter-spacing: 0.5px;
-            padding-bottom: 0;
-            margin-bottom: 0;
         }
-        div {
+        div.article {
             width: 82%;
             float: left;
-            padding-top: 5px;
-            padding-left: 9px;
-            margin-bottom: 0;
-
+            padding: 5px 20px 20px 9px;
             p {
-                padding-left: 0;
+                padding: 0;
                 line-height: 1.58;
                 letter-spacing: 0;
                 font-size: 14px;
                 color: #555555;
-                padding-bottom: 0;
-                margin-bottom: 0;
+                margin: 0;
             }
         }
     }

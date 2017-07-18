@@ -1,9 +1,10 @@
 'use strict';
 
-function toggle() {
+var menu = document.getElementById('menu-button');
+menu.addEventListener('click', function () {
     var display = document.getElementById('menu-bar').className;
     display === 'menu invisible' || display === 'menu' ? document.getElementById('menu-bar').className = 'menu visible' : document.getElementById('menu-bar').className = 'menu invisible';
-}
+});
 
 var i, width, left, right;
 var black0_5 = 'rgba(0, 0, 0, 0.5)';

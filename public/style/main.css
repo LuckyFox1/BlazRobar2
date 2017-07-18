@@ -9,7 +9,8 @@
 body {
   padding: 0;
   margin: 0;
-  height: 100%;
+  min-height: 1626px;
+  height: 1px;
   background-color: #cfcfcf;
 }
 div,
@@ -17,15 +18,17 @@ ul,
 li,
 h1,
 p,
-img {
+img,
+h3,
+h2 {
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+}
 li {
   list-style-type: none;
-}
-.list-hover li:hover {
-  color: #919191;
 }
 .wrapper {
   max-width: 1024px;
@@ -38,34 +41,34 @@ li {
 .header {
   min-width: 320px;
   background-color: #3a3e41;
-  height: 17px;
-  padding: 39px;
-  padding-top: 41px;
+  height: 97px;
   color: white;
   font-family: 'Montserrat Regular', sans-serif;
 }
-.header p {
+.header h2 {
   display: none;
 }
 .header .menu-button {
   display: none;
 }
 .header ul {
-  margin-left: 15px;
+  padding: 0 0 0 15px;
   display: block;
+  height: 100%;
 }
-.header ul li:hover {
-  color: #919191;
-}
-.header ul li {
+.header ul > li {
   display: inline-block;
+  vertical-align: middle;
+}
+.header ul > li a {
+  color: white;
   list-style-type: none;
   text-align: center;
   font-size: 15px;
-  margin-right: 24px;
+  margin: 0 24px 0 0;
 }
-.header ul li:first-child + li {
-  margin-right: 20.5px;
+.header ul > li:first-child + li a {
+  margin: 0 20.5px 0 0;
 }
 .gradient {
   background: -moz-linear-gradient(-45deg, #00b2c3 0%, #00a9bc 45%, #0094ac 73%, #0089a1 100%);
@@ -85,24 +88,22 @@ li {
   background: -ms-linear-gradient(-45deg, #00b2c3 0%, #00a9bc 45%, #0094ac 73%, #0089a1 100%);
   background: linear-gradient(135deg, #00b2c3 0%, #00a9bc 45%, #0094ac 73%, #0089a1 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00b2c3', endColorstr='#0089a1', GradientType=1);
-  padding-left: 83px;
-  padding-top: 130px;
+  padding: 130px 0 0 83px;
   height: 447px;
 }
 .main-banner .header-banner {
   font-family: 'Montserrat Regular', sans-serif;
-}
-.main-banner .header-banner p {
-  margin-top: 63px;
+  margin: 63px 0 0 0;
   max-width: 800px;
   display: block;
   font-size: 62px;
   color: white;
+  font-weight: normal;
   letter-spacing: 0.4px;
   line-height: 68px;
 }
-.main-banner .link p {
-  margin-top: 44px;
+.main-banner .link {
+  margin: 44px 0 0 0;
   max-width: 724px;
   display: block;
   color: #acd7de;
@@ -110,54 +111,58 @@ li {
   font-family: 'Montserrat Regular', sans-serif;
   letter-spacing: 0.3px;
 }
-.main-banner .link p:after {
+.main-banner .link:after {
   float: right;
   color: white;
-  margin-top: 6px;
+  margin: 7px 0 0 0;
   font-size: 37px;
   content: '>';
   font-family: 'QuickSand Bold', sans-serif;
 }
 .intermediate-block {
   min-width: 320px;
-  height: 53px;
   border: none;
 }
-.intermediate-block .right {
+.intermediate-block .left {
   float: left;
   background-color: #2c2630;
-  height: inherit;
-  display: inline-block;
+  height: 70.5px;
   width: 61%;
-  padding: 86px;
-  padding-right: 8.4%;
-  padding-left: 8.42%;
-  padding-top: 106px;
+  padding: 106px 8.4% 68px 8.42%;
 }
-.intermediate-block .right p {
+.intermediate-block .left h3 {
   font-family: 'Montserrat Regular', sans-serif;
   font-size: 31px;
   color: #9685a4;
   letter-spacing: 0.2px;
+  font-weight: normal;
 }
-.intermediate-block .left {
+.intermediate-block .right {
   float: left;
   background-color: #c03382;
   height: 71px;
   display: inline-block;
   width: 4.5%;
-  padding: 87px;
-  padding-right: 8.5%;
-  padding-left: 9.15%;
+  padding: 87px 8.5% 87px 9.15%;
 }
-.intermediate-block .left a {
+.intermediate-block .right a {
   display: block;
   width: 40px;
   text-decoration: none;
-  margin-top: 7px;
+  margin: 7px 0 0 0;
   color: white;
   font-family: "QuickSand Bold", sans-serif;
   font-size: 51px;
+}
+.intermediate-block:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.intermediate-block:before {
+  content: '';
+  display: block;
+  clear: both;
 }
 .gallery {
   min-width: 320px;
@@ -177,19 +182,19 @@ li {
   background-color: #eaeaea;
   height: 315px;
 }
-.content-section p {
-  padding-left: 3.1%;
+.content-section h3 {
+  font-weight: normal;
+  padding: 0 0 0 3.1%;
   font-size: 30px;
   color: #008aa3;
 }
-.content-section div {
-  padding: 20px;
-  padding-top: 18px;
+.content-section div.article {
+  padding: 18px 20px 20px 20px;
   width: 45%;
   float: left;
 }
-.content-section div p {
-  margin-bottom: 25px;
+.content-section div.article p {
+  margin: 0 0 25px 0;
   line-height: 1.9;
   letter-spacing: 0.01px;
   font-size: 14px;
@@ -209,15 +214,18 @@ li {
     padding: 0;
     height: 75px;
   }
-  .header p {
-    margin: 23px;
-    margin-left: 34px;
-    font-size: 22px;
+  .header h2 {
+    margin: 23px 0 0 35.5px;
+    font-size: 23px;
     display: inline-block;
-    letter-spacing: 0.9px;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+    vertical-align: middle;
   }
   .header ul {
     margin: 0;
+    padding: 0;
+    top: 75px;
     position: absolute;
     height: 190px;
     width: 100%;
@@ -231,14 +239,10 @@ li {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a3e41', endColorstr='#252a2d', GradientType=0);
     display: none;
   }
-  .header ul li:hover {
-    color: #919191;
-  }
-  .header ul li {
-    margin-top: 16px;
-    margin-left: 20px;
-    text-align: left;
+  .header ul > li {
     display: block;
+    margin: 15px 0 0 20px;
+    text-align: left;
   }
   .header ul.invisible {
     display: none;
@@ -247,6 +251,7 @@ li {
     display: block;
   }
   .header #menu-button {
+    position: relative;
     display: block;
     width: 6%;
     padding: 22px;
@@ -255,31 +260,52 @@ li {
     background-color: #252a2d;
     text-align: center;
   }
-  .header #menu-button span {
-    margin: 4px;
+  .header #menu-button div {
+    position: relative;
+    top: 10%;
+    margin-top: 9px;
+    margin-left: 4px;
+    background-color: white;
+    height: 4px;
+    width: 88%;
+  }
+  .header #menu-button div:before {
+    content: '';
+    position: absolute;
+    bottom: 35%;
+    display: block;
+    margin-bottom: 7px;
+    background-color: white;
+    height: 4px;
+    width: 100%;
+  }
+  .header #menu-button div:after {
+    content: '';
+    position: absolute;
+    top: 55%;
+    margin-top: 6px;
     display: block;
     background-color: white;
     height: 4px;
-    width: 82%;
+    width: 100%;
   }
   .main-banner {
-    padding-left: 51px;
-    padding-top: 45px;
+    padding: 45px 0 0 51px;
     height: 302px;
   }
-  .main-banner .header-banner p {
+  .main-banner .header-banner {
     font-size: 39px;
     letter-spacing: 0.1px;
     line-height: 1.1;
     max-width: 460px;
   }
-  .main-banner .link p {
-    margin-top: 28px;
+  .main-banner .link {
+    margin: 28px 0 0 0;
     max-width: 452px;
     font-size: 22px;
     letter-spacing: 0.2px;
   }
-  .main-banner .link p:after {
+  .main-banner .link:after {
     font-size: 24px;
     content: '>';
     font-family: 'QuickSand Bold', sans-serif;
@@ -288,29 +314,34 @@ li {
     height: 14px;
     border: none;
   }
-  .intermediate-block .right {
+  .intermediate-block .left {
     height: inherit;
-    display: inline-block;
     width: 61%;
-    padding: 68px;
-    padding-right: 8.4%;
-    padding-left: 8.42%;
+    padding: 68px 8.4% 68px 8.42%;
   }
-  .intermediate-block .right p {
+  .intermediate-block .left h3 {
     font-size: 20px;
     letter-spacing: -0.2px;
+    font-weight: normal;
   }
-  .intermediate-block .left {
+  .intermediate-block .right {
     height: 41px;
     width: 4.5%;
-    padding: 61px;
-    padding-top: 48px;
-    padding-right: 8.5%;
-    padding-left: 9.15%;
+    padding: 48px 8.5% 61px 9.15%;
   }
-  .intermediate-block .left a {
+  .intermediate-block .right a {
     width: 20px;
     font-size: 33px;
+  }
+  .intermediate-block .right:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .intermediate-block .left:before {
+    content: '';
+    display: block;
+    clear: both;
   }
   .gallery {
     min-height: 539px;
@@ -329,45 +360,50 @@ li {
     background-color: #eaeaea;
     height: 1130px;
   }
-  .content-section p {
+  .content-section h3 {
     margin-top: 10%;
     padding-left: 3.7%;
     font-size: 30px;
     color: #008aa3;
   }
-  .content-section div {
+  .content-section div.article {
     width: 100%;
     float: left;
-    padding-top: 29px;
+    padding: 29px 20px 20px 20px;
   }
-  .content-section div p {
-    margin-top: 0;
-    padding-left: 0;
+  .content-section div.article p {
+    padding: 0;
     line-height: 2;
     letter-spacing: 0;
     font-size: 22px;
     color: #555555;
   }
-  .content-section div:last-child {
+  .content-section div.article:last-child {
     margin-bottom: 40px;
   }
 }
 @media (max-width: 639px) {
+  body {
+    min-height: 1326px;
+  }
   .header {
     min-width: 320px;
     padding: 0;
     height: 38px;
   }
-  .header p {
-    margin: 12px;
-    margin-left: 14px;
-    font-size: 10px;
+  .header h2 {
+    vertical-align: middle;
+    margin: 12px 0 0 18px;
+    font-size: 10.5px;
     display: inline-block;
-    letter-spacing: 0.9px;
+    letter-spacing: 0.6px;
+    font-weight: normal;
   }
   .header ul {
     margin: 0;
+    padding: 0;
     position: absolute;
+    top: 38px;
     height: 140px;
     width: 100%;
     background-color: #252a2d;
@@ -380,14 +416,12 @@ li {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a3e41', endColorstr='#252a2d', GradientType=0);
     display: none;
   }
-  .header ul li:hover {
-    color: #919191;
-  }
   .header ul li {
-    margin-top: 12px;
-    margin-left: 15px;
+    margin: 6px 0 0 12px;
     text-align: left;
     display: block;
+  }
+  .header ul li a {
     font-size: 10px;
   }
   .header ul.invisible {
@@ -397,6 +431,7 @@ li {
     display: block;
   }
   .header #menu-button {
+    position: relative;
     display: block;
     width: 6.2%;
     padding: 10px;
@@ -407,32 +442,60 @@ li {
   }
   .header #menu-button span {
     margin: 2px;
+    background-color: white;
+    height: 2px;
+    width: 78%;
+  }
+  .header #menu-button div {
+    position: relative;
+    top: 0;
+    margin-top: 7px;
+    margin-left: 2px;
+    background-color: white;
+    height: 2px;
+    width: 72%;
+  }
+  .header #menu-button div:before {
+    content: '';
+    position: absolute;
+    bottom: 35%;
+    display: block;
+    margin-bottom: 3px;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+  }
+  .header #menu-button div:after {
+    content: '';
+    position: absolute;
+    top: 55%;
+    margin-top: 3px;
     display: block;
     background-color: white;
     height: 2px;
-    width: 77%;
+    width: 100%;
   }
   .main-banner {
-    min-width: 320px;
-    padding-left: 26px;
-    padding-top: 0.1%;
+    min-width: 294px;
+    padding: 0.1% 0 0 26px;
     height: 173px;
   }
-  .main-banner .header-banner p {
+  .main-banner .header-banner {
     max-width: 227px;
-    margin-top: 54px;
-    padding-top: 0;
+    margin: 53px 0 0 0;
     font-size: 21px;
+    font-weight: normal;
     letter-spacing: -0.9px;
     line-height: 1.05;
   }
-  .main-banner .link p {
-    margin-top: 12px;
+  .main-banner .link {
+    margin: 14px 0 0 0;
     max-width: 227px;
     font-size: 10px;
     letter-spacing: 0.75px;
   }
-  .main-banner .link p:after {
+  .main-banner .link:after {
+    margin: 0;
     font-size: 12px;
     content: '>';
     font-family: 'QuickSand Bold', sans-serif;
@@ -441,28 +504,34 @@ li {
     min-width: 320px;
     height: 7px;
   }
-  .intermediate-block .right {
+  .intermediate-block .left {
     height: inherit;
-    display: inline-block;
     width: 61%;
-    padding: 34px;
-    padding-right: 8.4%;
-    padding-left: 8.42%;
+    padding: 34px 8.4% 34px 8.42%;
   }
-  .intermediate-block .right p {
+  .intermediate-block .left h3 {
     font-size: 10px;
     letter-spacing: -0.1px;
+    font-weight: normal;
   }
-  .intermediate-block .left {
+  .intermediate-block .right {
     height: 25px;
     width: 4.5%;
-    padding: 25px;
-    padding-right: 8.5%;
-    padding-left: 9.15%;
+    padding: 25px 8.5% 25px 9.15%;
   }
-  .intermediate-block .left a {
+  .intermediate-block .right a {
     width: 20px;
     font-size: 16px;
+  }
+  .intermediate-block .right:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .intermediate-block .left:before {
+    content: '';
+    display: block;
+    clear: both;
   }
   .gallery {
     min-width: 320px;
@@ -475,36 +544,29 @@ li {
     height: auto;
   }
   .content-section {
-    padding: 24px;
-    padding-left: 27px;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    padding: 24px 24px 0 27px;
+    margin: 0;
     background-color: #eaeaea;
     min-height: 741px;
   }
-  .content-section p {
-    margin-top: 10px;
-    padding-left: 3.7%;
+  .content-section h3 {
+    margin: 10px 0 0 0;
+    padding: 0 0 0 3.7%;
     font-size: 18px;
     color: #008aa3;
     letter-spacing: 0.5px;
-    padding-bottom: 0;
-    margin-bottom: 0;
   }
-  .content-section div {
+  .content-section div.article {
     width: 82%;
     float: left;
-    padding-top: 5px;
-    padding-left: 9px;
-    margin-bottom: 0;
+    padding: 5px 20px 20px 9px;
   }
-  .content-section div p {
-    padding-left: 0;
+  .content-section div.article p {
+    padding: 0;
     line-height: 1.58;
     letter-spacing: 0;
     font-size: 14px;
     color: #555555;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    margin: 0;
   }
 }
