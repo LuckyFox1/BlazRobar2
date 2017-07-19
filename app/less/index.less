@@ -158,7 +158,6 @@ li {
 
 .gallery {
     min-width: 320px;
-
     clear: both;
     height: 294px;
     img {
@@ -343,13 +342,80 @@ li {
     .gallery {
         min-height: 539px;
         position: relative;
+        height: 88.5vw;
 
         img {
             clear: both;
             display: block;
             width: 100%;
             height: auto;
+            z-index: 0;
+            position: absolute;
+
+            &.active-slide {
+                z-index: 1;
+            }
         }
+
+        .left-arrow {
+            z-index: 5;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 9vw;
+            position: absolute;
+            top: 42%;
+            font-family: "QuickSand Bold", sans-serif;
+            left: 2%;
+            max-width: 5vw;
+            user-select: none;
+            cursor: pointer;
+            &.enabled {
+                color: white;
+            }
+        }
+
+        .right-arrow {
+            z-index: 5;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 9vw;
+            position: absolute;
+            top: 42%;
+            font-family: "QuickSand Bold", sans-serif;
+            left: 93%;
+            max-width: 5vw;
+            user-select: none;
+            cursor: pointer;
+            &.enabled {
+                color: white;
+            }
+        }
+
+        .pagination {
+            position: absolute;
+            z-index: 5;
+            height: 4vw;
+            width: 100%;
+            text-align: center;
+            bottom: 0;
+
+            li {
+                display: inline-block;
+                margin-left: 2%;
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 4vw;
+                cursor: pointer;
+
+                &.active {
+                    color: rgba(0, 0, 0, 0.8);
+                }
+
+                &.temp {
+                    color: rgba(0, 0, 0, 0.8);
+                }
+            }
+        }
+
+
+
     }
 
     .content-section {
@@ -537,12 +603,77 @@ li {
     .gallery {
         min-width: 320px;
         position: relative;
+        height: 88.5vw;
+        min-height: 285px;
 
         img {
             clear: both;
             display: block;
+            position: absolute;
+            z-index: 0;
             width: 100%;
             height: auto;
+
+            &.active-slide {
+                z-index: 1;
+            }
+        }
+
+        .left-arrow {
+            z-index: 5;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 9vw;
+            position: absolute;
+            top: 42%;
+            font-family: "QuickSand Bold", sans-serif;
+            left: 2%;
+            max-width: 5vw;
+            user-select: none;
+            cursor: pointer;
+            &.enabled {
+                color: white;
+            }
+        }
+
+        .right-arrow {
+            z-index: 5;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 9vw;
+            position: absolute;
+            top: 42%;
+            font-family: "QuickSand Bold", sans-serif;
+            left: 93%;
+            max-width: 5vw;
+            user-select: none;
+            cursor: pointer;
+            &.enabled {
+                color: white;
+            }
+        }
+
+        .pagination {
+            position: absolute;
+            z-index: 5;
+            height: 4vw;
+            width: 100%;
+            text-align: center;
+            bottom: 0;
+
+            li {
+                display: inline-block;
+                margin: 0 1%;
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 4vw;
+                cursor: pointer;
+
+                &.active {
+                    color: rgba(0, 0, 0, 0.8);
+                }
+
+                &.temp {
+                    color: rgba(0, 0, 0, 0.8);
+                }
+            }
         }
 
     }
