@@ -42,8 +42,10 @@ li {
   min-width: 320px;
   background-color: #3a3e41;
   height: 97px;
+  width: 100%;
   color: white;
   font-family: 'Montserrat Regular', sans-serif;
+  display: table;
 }
 .header h2 {
   display: none;
@@ -52,13 +54,13 @@ li {
   display: none;
 }
 .header ul {
-  padding: 0 0 0 15px;
-  display: block;
-  height: 100%;
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0 0 0 54px;
 }
 .header ul > li {
-  display: inline-block;
   vertical-align: middle;
+  display: inline-block;
 }
 .header ul > li a {
   color: white;
@@ -213,6 +215,7 @@ li {
   .header {
     padding: 0;
     height: 75px;
+    display: block;
   }
   .header h2 {
     margin: 23px 0 0 35.5px;
@@ -389,6 +392,7 @@ li {
     min-width: 320px;
     padding: 0;
     height: 38px;
+    display: block;
   }
   .header h2 {
     vertical-align: middle;
