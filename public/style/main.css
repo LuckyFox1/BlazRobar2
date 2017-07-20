@@ -36,7 +36,6 @@ li {
   margin: 0 auto;
   min-width: 320px;
   background-color: #eaeaea;
-  height: 100%;
 }
 .header {
   min-width: 320px;
@@ -292,6 +291,10 @@ li {
     height: 4px;
     width: 100%;
   }
+  .header:after {
+    content: '';
+    clear: both;
+  }
   .main-banner {
     padding: 45px 0 0 51px;
     height: 302px;
@@ -535,6 +538,10 @@ li {
     height: 2px;
     width: 100%;
   }
+  .header:after {
+    content: '';
+    clear: both;
+  }
   .main-banner {
     min-width: 294px;
     padding: 0.1% 0 0 26px;
@@ -672,6 +679,7 @@ li {
     font-size: 18px;
     color: #008aa3;
     letter-spacing: 0.5px;
+    display: inline-block;
   }
   .content-section div.article {
     width: 82%;

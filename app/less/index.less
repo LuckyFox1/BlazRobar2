@@ -27,7 +27,6 @@ li {
     margin: 0 auto;
     min-width: 320px;
     background-color: #eaeaea;
-    height: 100%;
 }
 
 .header {
@@ -281,6 +280,11 @@ li {
                 height: 4px;
                 width: 100%;
             }
+        }
+
+        &:after {
+            content: '';
+            clear: both;
         }
     }
 
@@ -539,6 +543,11 @@ li {
                 width: 100%;
             }
         }
+
+        &:after {
+            content: '';
+            clear: both;
+        }
     }
 
     .main-banner {
@@ -689,6 +698,7 @@ li {
             font-size: 18px;
             color: #008aa3;
             letter-spacing: 0.5px;
+            display: inline-block;
         }
         div.article {
             width: 82%;
